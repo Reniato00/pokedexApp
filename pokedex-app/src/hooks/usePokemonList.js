@@ -3,7 +3,7 @@ import {getPokemonList} from "../services/requests.js";
 
 const BASE_URL = "pokemon?limit=20&offset=0";
 
-export const usePokemonList = (initialUrl = BASE_URL) => {
+export const usePokemonList = () => {
     const [pokemons , setPokemons] = useState([]);
     const [nextUrl , setNextUrl] = useState(null);
     const [prevUrl , setPrevUrl] = useState(null);
@@ -25,8 +25,8 @@ export const usePokemonList = (initialUrl = BASE_URL) => {
     };
 
     useEffect(() => {
-        fetchPokemons(initialUrl);
-    }, [initialUrl]);
+        fetchPokemons(BASE_URL);
+    }, []);
 
     return {pokemons, nextUrl, prevUrl, loading, fetchPokemons};
 }
