@@ -18,9 +18,9 @@ export const usePokemonList = () => {
             setNextUrl(res.next);
             setPrevUrl(res.previous);
         } catch (err) {
-        console.error("Error al cargar Pokémon", err);
+            console.error("Error al cargar Pokémon", err);
         } finally {
-        setLoading(false);
+            setLoading(false);
         }
     };
 
