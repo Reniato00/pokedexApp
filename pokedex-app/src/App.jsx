@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Detail from './pages/Detail.jsx'
 import Navbar from './components/Navbar.jsx'
+import './assets/index.css'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pokemon/:id" element={<Detail />} />
+        <Route path="/pokemon/:name" element={<Detail />} />
       </Routes>
     </>
   )
